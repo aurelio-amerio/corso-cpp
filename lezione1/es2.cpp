@@ -1,3 +1,11 @@
+/*
+  Amerio Aurelio
+  Algoritmi numerici per la fisica
+  Lezione 1
+
+  Conta fino a 10 saltando i pari
+*/
+
 #include <iostream>
 using namespace std;
 

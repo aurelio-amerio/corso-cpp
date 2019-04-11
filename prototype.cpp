@@ -1,13 +1,14 @@
 /*
   Amerio Aurelio
   Algoritmi numerici per la fisica
-  Lezione 1
+  Lezione #
 
-  Hello world!
+  *nome dell'esecizio*
 */
 
-#include <iostream> // Preprocessor directive
+#include <iostream>
 using namespace std;
+
 int main() // Function Header
 {
   cout << endl;

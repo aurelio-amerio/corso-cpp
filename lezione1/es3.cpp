@@ -1,5 +1,9 @@
 /*
-  operazioni con interi
+  Amerio Aurelio
+  Algoritmi numerici per la fisica
+  Lezione 1
+
+  Operazioni con interi
 */
 
 #include <iostream>
