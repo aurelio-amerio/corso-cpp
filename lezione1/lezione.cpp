@@ -1,3 +1,7 @@
+/*
+hello world!
+*/
+
 #include <iostream> // Preprocessor directive
 using namespace std;
 int main() // Function Header
