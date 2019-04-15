@@ -18,13 +18,15 @@ double compute_std_dev(double *array, int len);
 
 int main() // Function Header
 {
-  srand(time(NULL));
+  // srand(time(NULL));
+  srand48(time(NULL));
   int num_elem = 0;
   cout << "dammi il numero di elementi per un array riempito casualmente: ";
   cin >> num_elem;
   double *array_sample = new double[num_elem];
   for (int i = 0; i < num_elem; i++) {
-    array_sample[i] = rand() %1000;
+    // array_sample[i] = rand() %1000;
+    array_sample[i] = drand48();
   }
   cout << "average: " << compute_average(array_sample, num_elem) << endl;
   cout << "variance: " << compute_variance(array_sample, num_elem) << endl;
