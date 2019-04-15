@@ -6,21 +6,12 @@
   Calcola il fattoriale
 */
 
-<<<<<<< HEAD
 #include <iostream>
 #include <math.h>
 using namespace std;
 
 unsigned int factorial(unsigned int a) {
   // valori non interi verrano troncati
-=======
-#include <cmath>
-#include <iostream>
-using namespace std;
-
-unsigned int factorial(unsigned int a) {
-  //valori non interi verrano troncati
->>>>>>> 720b9df4d943c1e9538749956131d53c544c2ddb
   if (a < 0 || floor(a) != a) {
     cout << "errore! il valore deve essere un intero positivo";
     return -1;
@@ -35,7 +26,6 @@ unsigned int factorial(unsigned int a) {
   }
 }
 
-<<<<<<< HEAD
 double factorial_for(int a) {
   // valori non interi verrano troncati
   double res = 1;
@@ -56,15 +46,12 @@ double factorial_big(int a) {
   return pow(10, res);
 }
 
-=======
->>>>>>> 720b9df4d943c1e9538749956131d53c544c2ddb
 int main() // Function Header
 {
   unsigned int a = 0;
   cout << "Dammi un numero intero, calcolerò il suo fattoriale!\n";
   cin >> a;
   unsigned int result = factorial(a);
-<<<<<<< HEAD
   double result2 = factorial_for(a);
   cout << "Fattoriale di " << a << " usando ricorsione = " << result << endl;
   cout << "Fattoriale di " << a << " usando un ciclo for = " << result2 << endl;
@@ -74,8 +61,5 @@ int main() // Function Header
   int b = 0;
   cin >> b;
   cout << factorial_big(b) << endl;
-=======
-  cout << "Fattoriale di " << a << " = " << result << endl;
->>>>>>> 720b9df4d943c1e9538749956131d53c544c2ddb
   return 0;
 }
