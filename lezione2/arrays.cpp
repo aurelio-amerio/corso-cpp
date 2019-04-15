@@ -7,7 +7,6 @@
 */
 
 #include <iostream>
-<<<<<<< HEAD
 #include <math.h>   /* sqrt, pow */
 #include <stdlib.h> /* srand, rand */
 #include <time.h>   /* time */
@@ -63,12 +62,3 @@ double compute_variance(double *array, int len) {
 double compute_std_dev(double *array, int len) {
   return sqrt(compute_variance(array, len));
 }
-=======
-using namespace std;
-
-int main() // Function Header
-{
-
-  return 0;
-}
->>>>>>> 720b9df4d943c1e9538749956131d53c544c2ddb
