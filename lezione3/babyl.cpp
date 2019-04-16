@@ -17,11 +17,15 @@ double sqrt_babyl(double s, double s0, double tol=1e-5) {
   int n = 0;
   while (n < 1000) {
     double tmp = (res + s / res) / 2;
-    if (fabs(tmp - res)/res < tol) {
+    double error=fabs(tmp - res)/res;
+    cout<<"#"<<n+1<<" errore relativo: "<<setw(15)<<error;
+    if ( error< tol) {
       res = tmp;
+      cout << " valore trovato: "<<setprecision(9)<<res<<endl;
       return res;
     } else {
       res = tmp;
+      cout << " valore trovato: "<<setprecision(9)<<res<<endl;
       n++;
     }
   }
@@ -34,7 +38,7 @@ int main() {
   double tol=1e-8;
   cout << " dammi s e s0: ";
   cin >> s >> s0;
-  cout << endl << "sqrt(s)= " << setprecision(14)<<sqrt_babyl(s, s0, tol)<<"+-"<<tol<<endl;
-  cout <<"valore 'vero': "<<sqrt(s)<<endl;
+  cout << endl << setprecision(9)<<setw(9)<<"sqrt(s)= " << sqrt_babyl(s, s0, tol)<<endl;
+  cout <<setprecision(9)<<setw(9)<<"valore 'vero': "<<sqrt(s)<<endl;
   return 0;
 }
