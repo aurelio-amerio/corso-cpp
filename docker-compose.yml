@@ -3,7 +3,7 @@ services:
   julia-cpp:
     image: aureamerio/julia-cpp
     ports:
-      - '7776:22'
+      - '4200:22'
       - '7777:7777'
     volumes:
       - './:/opt/project'
