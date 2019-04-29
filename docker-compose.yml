@@ -6,4 +6,4 @@ services:
       - '7776:22'
       - '7777:7777'
     volumes:
-      - './:/opt/project'
+      - 'D:\Users\Aure\Documents\GitHub\techytok-examples\julia-docker:/opt/project'
