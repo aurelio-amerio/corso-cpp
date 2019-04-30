@@ -34,6 +34,24 @@ double simps(double (*func)(double x), double a, double b, int n) {
   return res * dx / 3.;
 }
 
+double simps(double (*func)(double x), double a, double b, double tol = 1e-5,
+             bool verbose = false) {
+  int n = 2;
+  double res = 0.;
+  double res1 = 0.;
+  while (1) {
+    res = simps(func, a, b, n);
+    res1 = simps(func, a, b, n * 2);
+    if (fabs(res1 - res) < tol) {
+      if (verbose == true) {
+        cout << "n iter: " << n * 2 << endl;
+      }
+      return res1;
+    }
+    n *= 2;
+  }
+}
+
 double gauss_3(double (*func)(double x), double a, double b) {
   // numerical quadrature using Gauusian quadrature with 3 points
   static double w_[] = {8. / 9., 5. / 9., 5. / 9.};
@@ -49,30 +67,35 @@ double gauss_3(double (*func)(double x), double a, double b) {
   res *= c1;
   return res;
 }
-double gauss(double (*func)(double x), double a, double b, int n_points)
-{
+
+double gauss(double (*func)(double x), double a, double b, int n_points) {
   int n = n_points;
-  double dx = (b-a)/n;
-  double res=0.;
-  for(int i=0; i<n; i++)
-  {
-    xa=a+i*dx;
-    xb=xa+dx;
-    res += gauss_3(func, xa, xb)
+  double dx = (b - a) / n;
+  double res = 0.;
+  double xa = 0.;
+  double xb = 0;
+  for (int i = 0; i < n; i++) {
+    xa = a + i * dx;
+    xb = xa + dx;
+    res += gauss_3(func, xa, xb);
   }
   return res;
 }
-double gauss(double (*func)(double x), double a, double b, double tol)
-{
-  int n=2;
-  double res=0.;
-  double res1=0.;
-  while(1)
-  {
+
+double gauss(double (*func)(double x), double a, double b, double tol = 1e-5, bool verbose=false) {
+  int n = 2;
+  double res = 0.;
+  double res1 = 0.;
+  while (1) {
     res = gauss(func, a, b, n);
-    res1 = gauss(func, a, b, n*2);
-    if(fabs(res1-res)<tol) return res1;
-    n*=2;
+    res1 = gauss(func, a, b, n * 2);
+    if (fabs(res1 - res) < tol) {
+      if (verbose == true) {
+        cout << "n iter: " << n * 2 << endl;
+      }
+      return res1;
+    }
+    n *= 2;
   }
 }
 
@@ -103,8 +126,9 @@ int main() // Function Header
   int n = 2;
   cout << "dammi a, b: ";
   cin >> a >> b;
-  cout << "resut simps= " << setprecision(12) << simps(func, a, b, n) << endl;
-  cout << "resut gauss_3= " << setprecision(12) << gauss_3(func, a, b) << endl;
+  cout << setprecision(12);
+  cout << gauss(func, a, b, 1e-5) << endl;
+  cout << simps(func, a, b, 1e-5) << endl;
 
   return 0;
 }
