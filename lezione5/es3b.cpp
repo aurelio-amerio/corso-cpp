@@ -8,6 +8,7 @@
 
 #include "../lib/quad.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 double arg_Si(double x) { return sin(x) / x; }
@@ -49,18 +50,18 @@ double Si_mid(double x, int n_intervals) {
 
 int main()
 {
-  int n_int=0;
-  double x=0.8;
-  cout<<"x: ";
-  cin>>x;
-  cout<<"n intervals: ";
-  cin>>n_int;
-  int order = 5;
+  ofstream file;
+  file.open ("test.csv");
+  double dx=3./100.;
+  double x=0.;
+  file<<setprecision(12);
+  file<<"x,sin(x)/x"<<endl;
+  for(int i=0; i<100; i++)
+  {
+    x=1e-8+i*dx;
+    file<<x<<","<<arg_Si(x)<<endl;
+  }
 
-  cout<<setprecision(12);
-  cout <<"mid: "<< Si_mid(x, n_int) << endl;
-  cout <<"gauss: "<< Si(x, int(ceil(n_int/5)), order) << endl;
-  cout <<"true value: "<< Si(x, 1e-9) << endl;
-
+  file.close();
   return 0;
 }

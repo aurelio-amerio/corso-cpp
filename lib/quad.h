@@ -8,7 +8,32 @@
 #include <iomanip>
 #include <iostream>
 #include <math.h>
+
 using namespace std;
+
+//prototypes
+
+// double rect_quad(double (*func)(double x), double a, double b, int n);
+//
+// double mid_quad(double (*func)(double x), double a, double b, int n);
+//
+// double trapz(double (*func)(double x), double a, double b, int n);
+//
+// double simps(double (*func)(double x), double a, double b, int n);
+//
+// double simps(double (*func)(double x), double a, double b, double tol = 1e-5,
+//              bool verbose = false);
+//
+// double gauss_order(double (*func)(double x), double a, double b, int order = 5);
+//
+// double gauss(double (*func)(double x), double a, double b, int n_points,
+//              int order = 5);
+//
+// double gauss(double (*func)(double x), double a, double b, double tol = 1e-5,
+//              bool verbose = false);
+
+
+//implementation
 
 double rect_quad(double (*func)(double x), double a, double b, int n) {
   // numerical quadrature using rectangular rule
@@ -89,23 +114,86 @@ double simps(double (*func)(double x), double a, double b, double tol = 1e-5,
   }
 }
 
-double gauss_3(double (*func)(double x), double a, double b) {
+double gauss_order(double (*func)(double x), double a, double b,
+                   int order = 5) {
   // numerical quadrature using Gauusian quadrature with 3 points
-  static double w_[] = {8. / 9., 5. / 9., 5. / 9.};
-  static double x_[] = {0., sqrt(3. / 5.), -sqrt(3. / 5.)};
+  double w_[16];
+  double x_[16];
+  if (order == 1) {
+    w_[0] = 1.;
+    w_[1] = 1.;
+
+    x_[0] = -0.5773502691896257;
+    x_[1] = -x_[0];
+  }
+
+  else if (order == 3) {
+    w_[0] = 8. / 9.;
+    w_[1] = 5. / 9.;
+    w_[2] = -w_[1];
+
+    x_[0] = 0.;
+    x_[1] = sqrt(3. / 5.);
+    x_[2] = -x_[1];
+  }
+
+  else if (order == 4) {
+    w_[0] = 0.6521451548625461;
+    w_[1] = w_[0];
+    w_[2] = 0.3478548451374538;
+    w_[3] = -w_[2];
+
+    x_[0] = -0.3399810435848563;
+    x_[1] = x_[0];
+    x_[2] = -0.8611363115940526;
+    x_[3] = -x_[1];
+  }
+
+  else if (order == 5) {
+    w_[0] = 0.5688888888888889;
+    w_[1] = 0.4786286704993665;
+    w_[2] = 0.4786286704993665;
+    w_[3] = 0.2369268850561891;
+    w_[4] = 0.2369268850561891;
+
+    x_[0] = 0.0000000000000000;
+    x_[1] = -0.5384693101056831;
+    x_[2] = 0.5384693101056831;
+    x_[3] = -0.9061798459386640;
+    x_[4] = 0.9061798459386640;
+  }
+
+  else if (order == 6) {
+    w_[0] = 0.3607615730481386;
+    w_[1] = 0.3607615730481386;
+    w_[2] = 0.4679139345726910;
+    w_[3] = 0.4679139345726910;
+    w_[4] = 0.1713244923791704;
+    w_[5] = 0.1713244923791704;
+
+    x_[0] = 0.6612093864662645;
+    x_[1] = -0.6612093864662645;
+    x_[2] = -0.2386191860831969;
+    x_[3] = 0.2386191860831969;
+    x_[4] = -0.9324695142031521;
+    x_[5] = 0.9324695142031521;
+  } else {
+    cout << "order not supported! max 6" << endl;
+    return -1;
+  }
 
   double res = 0.;
   double c1 = (b - a) / 2;
   double c2 = (a + b) / 2;
 
-  for (int i = 0; i < 3; i++) {
+  for (int i = 0; i < order; i++) {
     res += w_[i] * func(c1 * x_[i] + c2);
   }
   res *= c1;
   return res;
 }
 
-double gauss(double (*func)(double x), double a, double b, int n_points) {
+double gauss(double (*func)(double x), double a, double b, int n_points, int order=5) {
   int n = n_points;
   double dx = (b - a) / n;
   double res = 0.;
@@ -114,7 +202,7 @@ double gauss(double (*func)(double x), double a, double b, int n_points) {
   for (int i = 0; i < n; i++) {
     xa = a + i * dx;
     xb = xa + dx;
-    res += gauss_3(func, xa, xb);
+    res += gauss_order(func, xa, xb, order);
   }
   return res;
 }
