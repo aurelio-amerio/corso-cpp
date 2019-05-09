@@ -17,4 +17,8 @@ double false_pos(double (*)(double), double, double, double, double);
 
 double secant(double (*)(double), double, double, double, double);
 
-double newton(double (*)(double), double (*)(double), double, double, double, double);
+double newton(double (*)(double), double (*)(double), double, double, double,
+              double);
+
+void bracket(double (*)(double), double, double, int, double *, double *,
+             int &);

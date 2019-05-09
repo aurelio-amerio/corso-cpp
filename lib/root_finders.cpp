@@ -5,7 +5,6 @@
   root finder implementation
 */
 #include "./root_finders.h"
-#define DEBUG 0
 
 double bisec(double (*func)(double), double a, double b, double xtol,
              double ytol) {
@@ -193,4 +192,24 @@ double newton(double (*func)(double), double (*der)(double), double a, double b,
   cout << "root found in " << k << " iterations!" << endl;
 #endif
   return result;
+}
+
+void bracket(double (*func)(double), double a, double b, int n_intervals,
+             double *xL, double *xR, int &n_roots) {
+  double fa = func(a);
+  double fb = 0;
+  n_roots = 0;
+  double dx = (b - a) / n_intervals;
+  for (int i = 0; i < n_intervals; i++) {
+    b = a + (i + 1) * dx;
+    fb = func(b);
+    if ((fb * fa) < 0) {
+      xL[n_roots] = a;
+      xR[n_roots] = b;
+      n_roots++;
+    }
+    fa = fb;
+    a = b;
+  }
+  return;
 }

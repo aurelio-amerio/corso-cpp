@@ -17,36 +17,23 @@ double derivative(double x) {
   return result;
 }
 
-int main()
-{
+int main() {
   int n_intervals = 100;
   double a = -10.;
   double b = 10.;
   double xtol = 1e-8;
   double ytol = 1e-8;
 
-  double dx = (b - a) / n_intervals;
-
   int n_roots = 0;
-  double roots[n_intervals];
+  double xL[10];
+  double xR[10];
 
-  double fa = func(a);
-  double fb = 0;
-
-  for (int i = 0; i < n_intervals; i++) {
-    b = a + (i + 1) * dx;
-    fb = func(b);
-    if ((fb * fa) < 0) {
-      roots[n_roots] = bisec(func, a, b, xtol, ytol);
-      n_roots++;
-    }
-    fa = fb;
-    a = b;
-  }
+  bracket(func, a, b, n_intervals, xL, xR, n_roots);
   cout << "n roots: " << n_roots << endl;
-  cout<<setprecision(9);
-  for (int i=0; i < n_roots; i++) {
-    cout << "#" << i << " " << roots[i] << endl;
+  cout << setprecision(9);
+  for (int i = 0; i < n_roots; i++) {
+    cout << "#" << i << " " << newton(func, derivative, xL[i], xR[i], xtol, ytol)
+         << endl;
   }
   // cout << "bisec" << endl;
   // double res_bisec = bisec(func, a, b, xtol, ytol);
