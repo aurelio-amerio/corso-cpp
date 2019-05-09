@@ -1,9 +1,9 @@
 #%%
-# using Pkg
+#using Pkg
 #
-# Pkg.add("DataFrames")
-# Pkg.add("CSV")
-# Pkg.add("Plots")
+#Pkg.add("DataFrames")
+#Pkg.add("CSV")
+#Pkg.add("Plots")
 #%%
 # using DataFrames
 # using CSV

@@ -5,12 +5,7 @@
 
   *nome dell'esecizio*
 */
-
-#include "froot.h"
-#include <iomanip>
-#include <iostream>
-#include <math.h>
-using namespace std;
+#include "../lib/root_finders.h"
 
 double func(double x) {
   static int n = 4;
@@ -50,20 +45,22 @@ int main() // Function Header
   double xtol = 1e-8;
   double ytol = 1e-8;
 
-  cout<<"bisec"<<endl;
+  cout << "bisec" << endl;
   double res_bisec = bisec(func, a, b, xtol, ytol);
-  cout<<"x: "<<res_bisec<<endl<<endl;
-  cout<<"false position"<<endl;
+  cout << "x: " << res_bisec << endl << endl;
+  cout << "false position" << endl;
   double res_fp = false_pos(func, a, b, xtol, ytol);
-  cout<<"x: "<<res_fp<<endl<<endl;
-  cout<<"secant"<<endl;
+  cout << "x: " << res_fp << endl << endl;
+  cout << "secant" << endl;
   double res_secant = secant(func, a, b, xtol, ytol);
-  cout<<"x: "<<res_secant<<endl<<endl;
-  cout<<"newton"<<endl;
+  cout << "x: " << res_secant << endl << endl;
+  cout << "newton" << endl;
   double res_newton = newton(func, derivative, a, b, xtol, ytol);
-  cout<<"x: "<<res_newton<<endl<<endl;
+  cout << "x: " << res_newton << endl << endl;
 
-
+#if DEBUG
+  cout << "DEBUG" << endl;
+#endif
 
   return 0;
 }
