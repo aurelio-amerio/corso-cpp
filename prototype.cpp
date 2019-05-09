@@ -1,9 +1,9 @@
 /*
   Amerio Aurelio
   Algoritmi numerici per la fisica
-  Lezione #
+  Lezione 9
 
-  *nome dell'esecizio*
+  polinomial roots
 */
 
 #include <iostream>
