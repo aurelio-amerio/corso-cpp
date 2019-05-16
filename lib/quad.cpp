@@ -1,9 +1,8 @@
 /*
   Amerio Aurelio
   Algoritmi numerici per la fisica
-  Lezione 4
 
-  quadratura numerica
+  quadratura numerica: implementation
 */
 
 #include "./quad.h"
@@ -70,23 +69,23 @@ double simps(double (*func)(double x), double a, double b, int n) {
   res += func(b);
   return res * dx / 3.;
 }
-
-double simps(double (*func)(double x), double a, double b, double tol) {
-  int n = 2;
-  double res = 0.;
-  double res1 = 0.;
-  while (1) {
-    res = simps(func, a, b, n);
-    res1 = simps(func, a, b, n * 2);
-    if (fabs(res1 - res) < tol) {
-      #if DEBUG
-        cout << "n iter: " << n * 2 << endl;
-      #endif
-      return res1;
-    }
-    n *= 2;
-  }
-}
+//
+// double simps(double (*func)(double x), double a, double b, double tol) {
+//   int n = 2;
+//   double res = 0.;
+//   double res1 = 0.;
+//   while (1) {
+//     res = simps(func, a, b, n);
+//     res1 = simps(func, a, b, n * 2);
+//     if (fabs(res1 - res) < tol) {
+//       #if DEBUG
+//         cout << "n iter: " << n * 2 << endl;
+//       #endif
+//       return res1;
+//     }
+//     n *= 2;
+//   }
+// }
 
 double gauss_order(double (*func)(double x), double a, double b, int order) {
   // numerical quadrature using Gauusian quadrature with 3 points
@@ -180,20 +179,20 @@ double gauss(double (*func)(double x), double a, double b, int n_points,
   }
   return res;
 }
-
-double gauss(double (*func)(double x), double a, double b, double tol) {
-  int n = 2;
-  double res = 0.;
-  double res1 = 0.;
-  while (1) {
-    res = gauss(func, a, b, n);
-    res1 = gauss(func, a, b, n * 2);
-    if (fabs(res1 - res) < tol) {
-#if DEBUG
-      cout << "n iter: " << n * 2 << endl;
-#endif
-      return res1;
-    }
-    n *= 2;
-  }
-}
+//
+// double gauss(double (*func)(double x), double a, double b, double tol) {
+//   int n = 2;
+//   double res = 0.;
+//   double res1 = 0.;
+//   while (1) {
+//     res = gauss(func, a, b, n);
+//     res1 = gauss(func, a, b, n * 2);
+//     if (fabs(res1 - res) < tol) {
+// #if DEBUG
+//       cout << "n iter: " << n * 2 << endl;
+// #endif
+//       return res1;
+//     }
+//     n *= 2;
+//   }
+// }

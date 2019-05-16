@@ -1,0 +1,128 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Bisection	.\lezione8\bisection.cpp	/^double Bisection(double (*func)(double), double a, double b, double tol) {$/;"	f
+DEBUG	.\lib\quad.h	11;"	d
+DEBUG	.\lib\root_finders.h	7;"	d
+Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
+Si	.\lezione5\es3.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
+Si	.\lezione5\es3.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	f
+Si	.\lezione5\es3b.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
+Si	.\lezione5\es3b.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	f
+Si	.\lezione5\es4.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
+Si	.\lezione5\es4.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	f
+Si_mid	.\lezione5\es3.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
+Si_mid	.\lezione5\es3b.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
+Sum	.\lezione1\sum.cpp	/^int Sum(int a, int b) { return a + b; }$/;"	f
+add_one	.\lezione1\add_one.cpp	/^int add_one(int &a) {$/;"	f
+add_one	.\lezione1\add_one.cpp	/^void add_one(&int);$/;"	v
+arg_Si	.\lezione5\es3.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
+arg_Si	.\lezione5\es3b.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
+arg_Si	.\lezione5\es4.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
+bisec	.\lezione8\froot.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
+bisec	.\lezione9\froot.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
+bisec	.\lezione9\froot.h	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
+bisec	.\lib\root_finders.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
+bracket	.\lib\root_finders.cpp	/^void bracket(double (*func)(double), double a, double b, int n_intervals,$/;"	f
+compute_average	.\lezione2\arrays.cpp	/^double compute_average(double *array, int len) {$/;"	f
+compute_std_dev	.\lezione2\arrays.cpp	/^double compute_std_dev(double *array, int len) {$/;"	f
+compute_variance	.\lezione2\arrays.cpp	/^double compute_variance(double *array, int len) {$/;"	f
+der	.\lezione9\froot.cpp	/^double der(double x) {$/;"	f
+derivative	.\lezione9\braketing.cpp	/^double derivative(double x) {$/;"	f
+derivative	.\lezione9\polinomial.cpp	/^double derivative(double x) {$/;"	f
+divisione_double	.\lezione1\es3.cpp	/^double divisione_double(int a, int b) {$/;"	f
+divisione_interi	.\lezione1\es3.cpp	/^int divisione_interi(int a, int b) {$/;"	f
+do_decay	.\lezione7\es3.cpp	/^bool do_decay(double lambda = 0.01) {$/;"	f
+error	.\lezione6\es3.cpp	/^double error(int n_points, int k)$/;"	f
+error	.\lezione6\es3b.cpp	/^double error(int n_points, int k) {$/;"	f
+exp_decay	.\lezione7\es3.cpp	/^int exp_decay(int n0, int t, double lambda = 0.01) {$/;"	f
+factorial	.\lezione2\factorial.cpp	/^unsigned int factorial(unsigned int a) {$/;"	f
+factorial	.\lezione3\sin_approx.cpp	/^double factorial(int a) {$/;"	f
+factorial_big	.\lezione2\factorial.cpp	/^double factorial_big(int a) {$/;"	f
+factorial_for	.\lezione2\factorial.cpp	/^double factorial_for(int a) {$/;"	f
+false_pos	.\lezione8\froot.cpp	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
+false_pos	.\lezione9\froot.cpp	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
+false_pos	.\lezione9\froot.h	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
+false_pos	.\lib\root_finders.cpp	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
+func	.\lezione4\es1.cpp	/^double func(double x) { return exp(-x); }$/;"	f
+func	.\lezione4\es2.cpp	/^double func(double x) { return sqrt(1 + x); }$/;"	f
+func	.\lezione4\es2b.cpp	/^double func(double x) { return sqrt(1 + x); }$/;"	f
+func	.\lezione6\es1.cpp	/^double func(double x, double y) {$/;"	f
+func	.\lezione8\bisection.cpp	/^double func(double x) {$/;"	f
+func	.\lezione8\froot.cpp	/^double func(double x) {$/;"	f
+func	.\lezione9\braketing.cpp	/^double func(double x) {$/;"	f
+func	.\lezione9\froot.cpp	/^double func(double x) {$/;"	f
+func	.\lezione9\polinomial.cpp	/^double func(double x) {$/;"	f
+func	.\lezione9\test_int.cpp	/^double func(double x) { return x * x * x + 3; }$/;"	f
+func2	.\lezione6\es1.cpp	/^double func2(double x, double y) {$/;"	f
+gauss	.\lezione4\es2.cpp	/^double gauss(double (*func)(double x), double a, double b, double tol)$/;"	f
+gauss	.\lezione4\es2.cpp	/^double gauss(double (*func)(double x), double a, double b, int n_points)$/;"	f
+gauss	.\lezione4\es2b.cpp	/^double gauss(double (*func)(double x), double a, double b, double tol = 1e-5, bool verbose=false) {$/;"	f
+gauss	.\lezione4\es2b.cpp	/^double gauss(double (*func)(double x), double a, double b, int n_points) {$/;"	f
+gauss	.\lib\quad.cpp	/^double gauss(double (*func)(double x), double a, double b, int n_points,$/;"	f
+gauss_3	.\lezione4\es2.cpp	/^double gauss_3(double (*func)(double x), double a, double b) {$/;"	f
+gauss_3	.\lezione4\es2b.cpp	/^double gauss_3(double (*func)(double x), double a, double b) {$/;"	f
+gauss_order	.\lib\quad.cpp	/^double gauss_order(double (*func)(double x), double a, double b, int order) {$/;"	f
+int_func	.\lezione4\es1.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
+int_func	.\lezione4\es2.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
+int_func	.\lezione4\es2b.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
+main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
+main	.\lezione1\es1.cpp	/^int main() {$/;"	f
+main	.\lezione1\es2.cpp	/^int main() {$/;"	f
+main	.\lezione1\es3.cpp	/^int main() {$/;"	f
+main	.\lezione1\lezione.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione1\quot.cpp	/^int main() {$/;"	f
+main	.\lezione1\sum.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione2\arrays.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione2\factorial.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione3\babyl.cpp	/^int main() {$/;"	f
+main	.\lezione3\quadratic.cpp	/^int main() {$/;"	f
+main	.\lezione3\roundoff.cpp	/^int main()$/;"	f
+main	.\lezione3\sin_approx.cpp	/^int main() {$/;"	f
+main	.\lezione4\es1.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione4\es2.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione4\es2b.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione5\es3.cpp	/^int main()$/;"	f
+main	.\lezione5\es3b.cpp	/^int main()$/;"	f
+main	.\lezione5\es4.cpp	/^int main()$/;"	f
+main	.\lezione6\es1.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione6\es2.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione6\es3.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione6\es3b.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione7\es3.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione7\pi.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione7\pi_plot.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione8\bisection.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione8\froot.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione9\braketing.cpp	/^int main() {$/;"	f
+main	.\lezione9\froot.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione9\polinomial.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\lezione9\test_int.cpp	/^int main() {$/;"	f
+main	.\prototype.cpp	/^int main() \/\/ Function Header$/;"	f
+mid_quad	.\lezione4\es1.cpp	/^double mid_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
+mid_quad	.\lib\quad.cpp	/^double mid_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
+n_term_sin	.\lezione3\sin_approx.cpp	/^double n_term_sin(int n, double x) {$/;"	f
+newton	.\lezione9\froot.cpp	/^double newton(double (*func)(double), double (*der)(double), double a, double b,$/;"	f
+newton	.\lezione9\froot.h	/^double newton(double (*func)(double), double (*der)(double), double a, double b,$/;"	f
+newton	.\lib\root_finders.cpp	/^double newton(double (*func)(double), double (*der)(double), double a, double b,$/;"	f
+rect_quad	.\lezione4\es1.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
+rect_quad	.\lib\quad.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
+secant	.\lezione8\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
+secant	.\lezione9\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
+secant	.\lezione9\froot.h	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
+secant	.\lib\root_finders.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
+simps	.\lezione4\es1.cpp	/^double simps(double (*func)(double x), double a, double b, int n) {$/;"	f
+simps	.\lezione4\es2.cpp	/^double simps(double (*func)(double x), double a, double b, int n) {$/;"	f
+simps	.\lezione4\es2b.cpp	/^double simps(double (*func)(double x), double a, double b, double tol = 1e-5,$/;"	f
+simps	.\lezione4\es2b.cpp	/^double simps(double (*func)(double x), double a, double b, int n) {$/;"	f
+simps	.\lib\quad.cpp	/^double simps(double (*func)(double x), double a, double b, int n) {$/;"	f
+sin	.\lezione3\sin_approx.cpp	/^double sin(double x) {$/;"	f
+solve	.\lezione3\quadratic.cpp	/^void solve(double a, double b, double c) {$/;"	f
+solve_v2	.\lezione3\quadratic.cpp	/^void solve_v2(double a, double b, double c) {$/;"	f
+sqrt_babyl	.\lezione3\babyl.cpp	/^double sqrt_babyl(double s, double s0, double tol=1e-5) {$/;"	f
+test_conv	.\lezione4\es1.cpp	/^double test_conv(double (*func)(double (*arg)(double x), double a, double b,$/;"	f
+trapz	.\lezione4\es1.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
+trapz	.\lib\quad.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
