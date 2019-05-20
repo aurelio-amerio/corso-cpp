@@ -22,22 +22,30 @@ add_one	.\lezione1\add_one.cpp	/^void add_one(&int);$/;"	v
 arg_Si	.\lezione5\es3.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
 arg_Si	.\lezione5\es3b.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
 arg_Si	.\lezione5\es4.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
+backward_derivaive	.\lezione10\derivatives.h	/^double backward_derivaive(double (*func)(double x), double x0, double h)$/;"	f
 bisec	.\lezione8\froot.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
 bisec	.\lezione9\froot.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
 bisec	.\lezione9\froot.h	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
 bisec	.\lib\root_finders.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
 bracket	.\lib\root_finders.cpp	/^void bracket(double (*func)(double), double a, double b, int n_intervals,$/;"	f
+central_derivaive	.\lezione10\derivatives.h	/^double central_derivaive(double (*func)(double x), double x0, double h)$/;"	f
 compute_average	.\lezione2\arrays.cpp	/^double compute_average(double *array, int len) {$/;"	f
 compute_std_dev	.\lezione2\arrays.cpp	/^double compute_std_dev(double *array, int len) {$/;"	f
 compute_variance	.\lezione2\arrays.cpp	/^double compute_variance(double *array, int len) {$/;"	f
 der	.\lezione9\froot.cpp	/^double der(double x) {$/;"	f
+der_func	.\lezione10\deriv.cpp	/^double der_func(double x)$/;"	f
+derivaive_f	.\lezione10\derivatives.h	/^double derivaive_f(double (*func)(double x), double x0, double h)$/;"	f
 derivative	.\lezione9\braketing.cpp	/^double derivative(double x) {$/;"	f
 derivative	.\lezione9\polinomial.cpp	/^double derivative(double x) {$/;"	f
 divisione_double	.\lezione1\es3.cpp	/^double divisione_double(int a, int b) {$/;"	f
 divisione_interi	.\lezione1\es3.cpp	/^int divisione_interi(int a, int b) {$/;"	f
 do_decay	.\lezione7\es3.cpp	/^bool do_decay(double lambda = 0.01) {$/;"	f
+dydx	.\lezione10\ode.cpp	/^double dydx(double x, double y) { return -x * y; }$/;"	f
 error	.\lezione6\es3.cpp	/^double error(int n_points, int k)$/;"	f
 error	.\lezione6\es3b.cpp	/^double error(int n_points, int k) {$/;"	f
+euler	.\lezione10\ode.cpp	/^double euler(double (*dydx)(double x, double y), double x, double y0,$/;"	f
+euler_print	.\lezione10\ode.cpp	/^double euler_print(double (*dydx)(double x, double y),$/;"	f
+exact	.\lezione10\ode.cpp	/^double exact(double x) { return exp(-x * x \/ 2); }$/;"	f
 exp_decay	.\lezione7\es3.cpp	/^int exp_decay(int n0, int t, double lambda = 0.01) {$/;"	f
 factorial	.\lezione2\factorial.cpp	/^unsigned int factorial(unsigned int a) {$/;"	f
 factorial	.\lezione3\sin_approx.cpp	/^double factorial(int a) {$/;"	f
@@ -47,6 +55,8 @@ false_pos	.\lezione8\froot.cpp	/^double false_pos(double (*func)(double), double
 false_pos	.\lezione9\froot.cpp	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
 false_pos	.\lezione9\froot.h	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
 false_pos	.\lib\root_finders.cpp	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
+forward_derivaive	.\lezione10\derivatives.h	/^double forward_derivaive(double (*func)(double x), double x0, double h)$/;"	f
+func	.\lezione10\deriv.cpp	/^double func(double x)$/;"	f
 func	.\lezione4\es1.cpp	/^double func(double x) { return exp(-x); }$/;"	f
 func	.\lezione4\es2.cpp	/^double func(double x) { return sqrt(1 + x); }$/;"	f
 func	.\lezione4\es2b.cpp	/^double func(double x) { return sqrt(1 + x); }$/;"	f
@@ -69,6 +79,8 @@ gauss_order	.\lib\quad.cpp	/^double gauss_order(double (*func)(double x), double
 int_func	.\lezione4\es1.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2b.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
+main	.\lezione10\deriv.cpp	/^int main()$/;"	f
+main	.\lezione10\ode.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
