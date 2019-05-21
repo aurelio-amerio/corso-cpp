@@ -97,69 +97,71 @@ void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),
 // double exact(double x) { return exp(-x * x / 2); }
 
 int main() {
-  ofstream file, file2, file3;
-  file.open("rk_ode.dat");
-  file2.open("rk4_ode.dat");
-  file3.open("eu_ode.dat");
+  ofstream file1, file2, file3;
+  file1.open("rk_error.dat");
+  file2.open("rk4_error.dat");
+  file3.open("eu_error.dat");
   // file2.open("euler_ode.dat");
-  double pi=3.1415926;
-  double tMAX = 20. * pi;
-  int n_steps = 200;
-  double dt = tMAX / n_steps;
+  double pi = 3.1415926;
+  double tMAX = 2. * pi;
+  int n_steps = 0;
+  double dt = 0;
   int neq = 2;
 
   double Y[] = {1, 0};
   double t = 0;
-  file << Y[0] << " " << Y[1] << endl;
-
-  cout << endl;
-  cout << "rk: \n";
-  for (int n = 0; n < n_steps; n++) {
-    RKStep(t, Y, rhs, dt, neq);
-    t += dt;
-
-    file << Y[0] << " " << Y[1] << endl;
-    cout << "x^2 + y^2 = " << Y[0] * Y[0] + Y[1] * Y[1] << endl;
-  }
-  cout << "x(20π): " << Y[0] << "\ty(20π): " << Y[1] << endl;
+  double error = fabs(Y[0] - cos(t));
 
   Y[0] = 1;
   Y[1] = 0;
   t = 0;
 
-  cout << endl;
-  cout << "euler: \n";
-  file3 << Y[0] << " " << Y[1] << endl;
-  for (int n = 0; n < n_steps; n++) {
-    EulerStep(t, Y, rhs, dt, neq);
-    t += dt;
+  for (int i = 2; i < 12; i++) {
+    n_steps = pow(2, i);
+    dt = tMAX / n_steps;
+    Y[0] = 1;
+    Y[1] = 0;
+    t = 0;
 
-    file3 << Y[0] << " " << Y[1] << endl;
-    cout << "x^2 + y^2 = " << Y[0] * Y[0] + Y[1] * Y[1] << endl;
+    for (int n = 0; n < n_steps; n++) {
+      RKStep(t, Y, rhs, dt, neq);
+      t += dt;
+    }
+    error = fabs(Y[0] - cos(tMAX));
+    file1 << n_steps << " " << error<<endl;
   }
 
-  cout << "x(20π): " << Y[0] << "\ty(20π): " << Y[1] << endl;
-  // file << t << " " << Y[0] << " " << Y[1] << endl;
+  for (int i = 2; i < 11; i++) {
+    n_steps = pow(2, i);
+    dt = tMAX / n_steps;
+    Y[0] = 1;
+    Y[1] = 0;
+    t = 0;
 
-  Y[0] = 1;
-  Y[1] = 0;
-  t = 0;
-  file2 << Y[0] << " " << Y[1] << endl;
-
-  cout << endl;
-  cout << "rk4: \n";
-  for (int n = 0; n < n_steps; n++) {
-    RK4Step(t, Y, rhs, dt, neq);
-    t += dt;
-
-    file2 <<Y[0] << " " << Y[1] << endl;
-    cout << "x^2 + y^2 = " << Y[0] * Y[0] + Y[1] * Y[1] << endl;
+    for (int n = 0; n < n_steps; n++) {
+      RK4Step(t, Y, rhs, dt, neq);
+      t += dt;
+    }
+    error = fabs(Y[0] - cos(tMAX));
+    file2 << n_steps << " " << error<<endl;
   }
 
-  cout << "x(20π): " << Y[0] << "\ty(20π): " << Y[1] << endl;
-  // file << t << " " << Y[0] << " " << Y[1] << endl;
+  for (int i = 2; i < 11; i++) {
+    n_steps = pow(2, i);
+    dt = tMAX / n_steps;
+    Y[0] = 1;
+    Y[1] = 0;
+    t = 0;
 
-  file.close();
+    for (int n = 0; n < n_steps; n++) {
+      EulerStep(t, Y, rhs, dt, neq);
+      t += dt;
+    }
+    error = fabs(Y[0] - cos(tMAX));
+    file3 << n_steps << " " << error<<endl;
+  }
+
+  file1.close();
   file2.close();
   file3.close();
   return 0;
