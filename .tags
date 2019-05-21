@@ -7,7 +7,11 @@
 Bisection	.\lezione8\bisection.cpp	/^double Bisection(double (*func)(double), double a, double b, double tol) {$/;"	f
 DEBUG	.\lib\quad.h	11;"	d
 DEBUG	.\lib\root_finders.h	7;"	d
+EulerStep	.\lezione11\ode.cpp	/^void EulerStep(double x, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
+EulerStep	.\lezione11\rk_es2.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
+RKStep	.\lezione11\rk_es1.cpp	/^void RKStep(double x, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
+RKStep	.\lezione11\rk_es2.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 Si	.\lezione5\es3.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
 Si	.\lezione5\es3.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	f
 Si	.\lezione5\es3b.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
@@ -32,6 +36,8 @@ central_derivaive	.\lezione10\derivatives.h	/^double central_derivaive(double (*
 compute_average	.\lezione2\arrays.cpp	/^double compute_average(double *array, int len) {$/;"	f
 compute_std_dev	.\lezione2\arrays.cpp	/^double compute_std_dev(double *array, int len) {$/;"	f
 compute_variance	.\lezione2\arrays.cpp	/^double compute_variance(double *array, int len) {$/;"	f
+dYdx	.\lezione11\ode.cpp	/^void dYdx(double x, double *Y, double *R) {$/;"	f
+dYdx	.\lezione11\rk_es1.cpp	/^void dYdx(double x, double *Y, double *R) {$/;"	f
 der	.\lezione9\froot.cpp	/^double der(double x) {$/;"	f
 der_func	.\lezione10\deriv.cpp	/^double der_func(double x)$/;"	f
 derivaive_f	.\lezione10\derivatives.h	/^double derivaive_f(double (*func)(double x), double x0, double h)$/;"	f
@@ -46,6 +52,8 @@ error	.\lezione6\es3b.cpp	/^double error(int n_points, int k) {$/;"	f
 euler	.\lezione10\ode.cpp	/^double euler(double (*dydx)(double x, double y), double x, double y0,$/;"	f
 euler_print	.\lezione10\ode.cpp	/^double euler_print(double (*dydx)(double x, double y),$/;"	f
 exact	.\lezione10\ode.cpp	/^double exact(double x) { return exp(-x * x \/ 2); }$/;"	f
+exact	.\lezione11\ode.cpp	/^double exact(double x) { return exp(-x * x \/ 2); }$/;"	f
+exact	.\lezione11\rk_es1.cpp	/^double exact(double x) { return exp(-x * x \/ 2); }$/;"	f
 exp_decay	.\lezione7\es3.cpp	/^int exp_decay(int n0, int t, double lambda = 0.01) {$/;"	f
 factorial	.\lezione2\factorial.cpp	/^unsigned int factorial(unsigned int a) {$/;"	f
 factorial	.\lezione3\sin_approx.cpp	/^double factorial(int a) {$/;"	f
@@ -81,6 +89,9 @@ int_func	.\lezione4\es2.cpp	/^double int_func(double a, double b) { return -exp(
 int_func	.\lezione4\es2b.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 main	.\lezione10\deriv.cpp	/^int main()$/;"	f
 main	.\lezione10\ode.cpp	/^int main() {$/;"	f
+main	.\lezione11\ode.cpp	/^int main() {$/;"	f
+main	.\lezione11\rk_es1.cpp	/^int main() {$/;"	f
+main	.\lezione11\rk_es2.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -122,6 +133,7 @@ newton	.\lezione9\froot.h	/^double newton(double (*func)(double), double (*der)(
 newton	.\lib\root_finders.cpp	/^double newton(double (*func)(double), double (*der)(double), double a, double b,$/;"	f
 rect_quad	.\lezione4\es1.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
 rect_quad	.\lib\quad.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
+rhs	.\lezione11\rk_es2.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 secant	.\lezione8\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.h	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
