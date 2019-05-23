@@ -10,12 +10,15 @@ DEBUG	.\lib\root_finders.h	7;"	d
 EulerStep	.\lezione11\ode.cpp	/^void EulerStep(double x, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 EulerStep	.\lezione11\rk_es2.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 EulerStep	.\lezione11\rk_es3.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
+EulerStep	.\lib\ode.h	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
 RK4Step	.\lezione11\rk_es2.cpp	/^void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RK4Step	.\lezione11\rk_es3.cpp	/^void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
+RK4Step	.\lib\ode.h	/^void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RKStep	.\lezione11\rk_es1.cpp	/^void RKStep(double x, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RKStep	.\lezione11\rk_es2.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RKStep	.\lezione11\rk_es3.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
+RKStep	.\lib\ode.h	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 Si	.\lezione5\es3.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
 Si	.\lezione5\es3.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	f
 Si	.\lezione5\es3b.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
@@ -97,6 +100,7 @@ main	.\lezione11\ode.cpp	/^int main() {$/;"	f
 main	.\lezione11\rk_es1.cpp	/^int main() {$/;"	f
 main	.\lezione11\rk_es2.cpp	/^int main() {$/;"	f
 main	.\lezione11\rk_es3.cpp	/^int main() {$/;"	f
+main	.\lezione12\kepler.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -140,6 +144,7 @@ rect_quad	.\lezione4\es1.cpp	/^double rect_quad(double (*func)(double x), double
 rect_quad	.\lib\quad.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
 rhs	.\lezione11\rk_es2.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs	.\lezione11\rk_es3.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
+rhs_1	.\lezione12\kepler.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
 secant	.\lezione8\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.h	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
