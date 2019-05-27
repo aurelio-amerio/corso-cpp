@@ -1,21 +1,15 @@
 /*
   Amerio Aurelio
   Algoritmi numerici per la fisica
-  Lezione 9
+  Lezione #
 
-  polinomial roots
+  nome
 */
 
 #include <iostream>
 using namespace std;
 
-int main() // Function Header
+int main()
 {
-  cout << endl;
-  cout << "-------------------------------------------+" << endl;
-  cout << "+ Hello world ! +" << endl;
-  cout << "+ +" << endl;
-  cout << "+ Welcome to the Numerical Algorithm Class +" << endl;
-  cout << "+------------------------------------------+" << endl;
   return 0;
 }

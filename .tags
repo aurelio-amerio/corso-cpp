@@ -28,6 +28,7 @@ Si	.\lezione5\es4.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	
 Si_mid	.\lezione5\es3.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Si_mid	.\lezione5\es3b.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Sum	.\lezione1\sum.cpp	/^int Sum(int a, int b) { return a + b; }$/;"	f
+acc	.\lezione13\harmonic.cpp	/^void acc(double *X, double *res, int n_part) {$/;"	f
 add_one	.\lezione1\add_one.cpp	/^int add_one(int &a) {$/;"	f
 add_one	.\lezione1\add_one.cpp	/^void add_one(&int);$/;"	v
 arg_Si	.\lezione5\es3.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
@@ -101,6 +102,7 @@ main	.\lezione11\rk_es1.cpp	/^int main() {$/;"	f
 main	.\lezione11\rk_es2.cpp	/^int main() {$/;"	f
 main	.\lezione11\rk_es3.cpp	/^int main() {$/;"	f
 main	.\lezione12\kepler.cpp	/^int main() {$/;"	f
+main	.\lezione13\harmonic.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -133,7 +135,7 @@ main	.\lezione9\braketing.cpp	/^int main() {$/;"	f
 main	.\lezione9\froot.cpp	/^int main() \/\/ Function Header$/;"	f
 main	.\lezione9\polinomial.cpp	/^int main() \/\/ Function Header$/;"	f
 main	.\lezione9\test_int.cpp	/^int main() {$/;"	f
-main	.\prototype.cpp	/^int main() \/\/ Function Header$/;"	f
+main	.\prototype.cpp	/^int main()$/;"	f
 mid_quad	.\lezione4\es1.cpp	/^double mid_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
 mid_quad	.\lib\quad.cpp	/^double mid_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
 n_term_sin	.\lezione3\sin_approx.cpp	/^double n_term_sin(int n, double x) {$/;"	f
@@ -145,6 +147,7 @@ rect_quad	.\lib\quad.cpp	/^double rect_quad(double (*func)(double x), double a, 
 rhs	.\lezione11\rk_es2.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs	.\lezione11\rk_es3.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs_1	.\lezione12\kepler.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
+rhs_1	.\lezione13\harmonic.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
 secant	.\lezione8\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.h	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
@@ -161,3 +164,5 @@ sqrt_babyl	.\lezione3\babyl.cpp	/^double sqrt_babyl(double s, double s0, double 
 test_conv	.\lezione4\es1.cpp	/^double test_conv(double (*func)(double (*arg)(double x), double a, double b,$/;"	f
 trapz	.\lezione4\es1.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 trapz	.\lib\quad.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
+velocity_Verlet	.\lezione13\harmonic.cpp	/^void velocity_Verlet(double *X, double *V,$/;"	f
+velocity_Verlet_print	.\lezione13\harmonic.cpp	/^void velocity_Verlet_print(double *X, double *V,$/;"	f
