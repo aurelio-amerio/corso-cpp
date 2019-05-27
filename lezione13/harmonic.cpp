@@ -15,6 +15,8 @@
 
 using namespace std;
 
+void acc(double *X, double *res, int n_part);
+
 void velocity_Verlet(double *X, double *V,
                      void (*acc)(double *X, double *res, int n_part), double h,
                      int n_part, int n_steps) {
@@ -97,35 +99,6 @@ void verlet4(double *X, double *V,
 #endif
   return;
 }
-
-// void velocity_Verlet_print(double *X, double *V,
-//                            void (*acc)(double *X, double *res, int n_part),
-//                            double h, int n_part, int n_steps) {
-//   double vn12[n_part];
-//   double accel[n_part];
-//   ofstream file;
-//   file.open("harmonic_verlet.dat");
-//   file << "0 " << X[0] << " " << V[0] << endl;
-//
-//   acc(X, accel, n_part); // initialize acceleration
-//
-//   for (int j = 1; j <= n_steps; j++) {
-//     // compute X(n+1)
-//     for (int i = 0; i < n_part; i++) {
-//       vn12[i] = V[i] + h / 2 * accel[i];
-//       X[i] = X[i] + h * vn12[i];
-//     }
-//     acc(X, accel, n_part); // update acceleration -> a(x n+1)
-//
-//     // compute v(n+1)
-//     for (int i = 0; i < n_part; i++) {
-//       V[i] = vn12[i] + h / 2 * accel[i];
-//     }
-//     file << j << " " << X[0] << " " << V[0] << endl;
-//   }
-//
-//   return;
-// }
 
 void acc(double *X, double *res, int n_part) {
   double omega = 1;

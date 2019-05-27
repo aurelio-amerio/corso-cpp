@@ -12,6 +12,7 @@ EulerStep	.\lezione11\rk_es2.cpp	/^void EulerStep(double t, double *Y, void (*Yd
 EulerStep	.\lezione11\rk_es3.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 EulerStep	.\lib\ode.h	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 PRINT	.\lezione13\harmonic.cpp	14;"	d	file:
+PRINT	.\lib\ode.h	7;"	d
 Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
 RK4Step	.\lezione11\rk_es2.cpp	/^void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RK4Step	.\lezione11\rk_es3.cpp	/^void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
@@ -30,6 +31,7 @@ Si_mid	.\lezione5\es3.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Si_mid	.\lezione5\es3b.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Sum	.\lezione1\sum.cpp	/^int Sum(int a, int b) { return a + b; }$/;"	f
 acc	.\lezione13\harmonic.cpp	/^void acc(double *X, double *res, int n_part) {$/;"	f
+acc	.\lezione13\pendulum.cpp	/^void acc(double *Theta, double *res, int n_part)$/;"	f
 add_one	.\lezione1\add_one.cpp	/^int add_one(int &a) {$/;"	f
 add_one	.\lezione1\add_one.cpp	/^void add_one(&int);$/;"	v
 arg_Si	.\lezione5\es3.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
@@ -105,6 +107,7 @@ main	.\lezione11\rk_es3.cpp	/^int main() {$/;"	f
 main	.\lezione12\kepler.cpp	/^int main() {$/;"	f
 main	.\lezione13\harmonic.cpp	/^int main() {$/;"	f
 main	.\lezione13\kepler.cpp	/^int main() {$/;"	f
+main	.\lezione13\pendulum.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -168,4 +171,6 @@ test_conv	.\lezione4\es1.cpp	/^double test_conv(double (*func)(double (*arg)(dou
 trapz	.\lezione4\es1.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 trapz	.\lib\quad.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 velocity_Verlet	.\lezione13\harmonic.cpp	/^void velocity_Verlet(double *X, double *V,$/;"	f
+velocity_Verlet	.\lib\ode.h	/^void velocity_Verlet(double *X, double *V,$/;"	f
 verlet4	.\lezione13\harmonic.cpp	/^void verlet4(double *X, double *V,$/;"	f
+verlet4	.\lib\ode.h	/^void verlet4(double *X, double *V,$/;"	f

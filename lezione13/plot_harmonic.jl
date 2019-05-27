@@ -62,3 +62,6 @@ plot!(legend=:bottomleft)
 xlabel!("step")
 ylabel!("Energy")
 savefig("harmonic2.png")
+
+
+pi/4

@@ -1,7 +1,14 @@
+// a library with helpful functions to solve ODEs
+
+// #include "../lib/ode.h"
+#include <fstream>
 #include <math.h>
+
+#define PRINT 0
+
 using namespace std;
 
-//prototype
+// prototype
 
 void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),
             double dt, int neq);
@@ -10,7 +17,15 @@ void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),
 void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),
                double dt, int neq);
 
-//implementation
+void velocity_Verlet(double *X, double *V,
+                     void (*acc)(double *X, double *res, int n_part), double h,
+                     int n_part, int n_steps);
+
+void verlet4(double *X, double *V,
+             void (*acc)(double *X, double *res, int n_part), double h,
+             int n_part, int n_steps);
+
+// implementation
 void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),
             double dt, int neq) {
   // Runge-Kutta step using Midpoint integration
@@ -81,5 +96,88 @@ void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),
   for (int n = 0; n < neq; n++) {
     Y[n] += dt * rhs[n];
   }
+  return;
+}
+
+void velocity_Verlet(double *X, double *V,
+                     void (*acc)(double *X, double *res, int n_part), double h,
+                     int n_part, int n_steps) {
+  double vn12[n_part];
+  double accel[n_part];
+#if PRINT
+  ofstream file;
+  file.open("harmonic_verlet.dat");
+  file << "0 " << X[0] << " " << V[0] << endl;
+#endif
+  acc(X, accel, n_part); // initialize acceleration
+
+  for (int j = 0; j < n_steps; j++) {
+    // compute X(n+1)
+    for (int i = 0; i < n_part; i++) {
+      vn12[i] = V[i] + h * 0.5 * accel[i];
+      X[i] = X[i] + h * vn12[i];
+    }
+    acc(X, accel, n_part); // update acceleration -> a(x n+1)
+
+    // compute v(n+1)
+    for (int i = 0; i < n_part; i++) {
+      V[i] = vn12[i] + h * 0.5 * accel[i];
+    }
+#if PRINT
+    file << j << " " << X[0] << " " << V[0] << endl;
+#endif
+  }
+#if PRINT
+  file.close();
+#endif
+  return;
+}
+
+void verlet4(double *X, double *V,
+             void (*acc)(double *X, double *res, int n_part), double h,
+             int n_part, int n_steps) {
+  static const double gamma = 1. / (2. - pow(2., 1. / 3.));
+  double accel[n_part];
+  acc(X, accel, n_part); // initialize acceleration
+
+#if PRINT
+  ofstream file;
+  file.open("harmonic_verlet4.dat");
+  file << "0 " << X[0] << " " << V[0] << endl;
+#endif
+
+  for (int j = 0; j < n_steps; j++) {
+    // first step
+    for (int i = 0; i < n_part; i++) {
+      V[i] = V[i] + gamma * h * 0.5 * accel[i];
+      X[i] = X[i] + gamma * h * V[i];
+    }
+    acc(X, accel, n_part); // update acceleration
+
+    // second step
+    for (int i = 0; i < n_part; i++) {
+      V[i] = V[i] + (1 - gamma) * h * 0.5 * accel[i];
+      X[i] = X[i] + (1 - 2 * gamma) * h * V[i];
+    }
+    acc(X, accel, n_part); // update acceleration
+
+    // third step
+    for (int i = 0; i < n_part; i++) {
+      V[i] = V[i] + (1 - gamma) * h * 0.5 * accel[i];
+      X[i] = X[i] + gamma * h * V[i];
+    }
+    acc(X, accel, n_part); // update acceleration
+
+    // finally compute v
+    for (int i = 0; i < n_part; i++) {
+      V[i] = V[i] + gamma * h * 0.5 * accel[i];
+    }
+#if PRINT
+    file << j << " " << X[0] << " " << V[0] << endl;
+#endif
+  }
+#if PRINT
+  file.close();
+#endif
   return;
 }
