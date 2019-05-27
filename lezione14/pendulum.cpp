@@ -1,7 +1,7 @@
 /*
   Amerio Aurelio
   Algoritmi numerici per la fisica
-  Lezione 13
+  Lezione 14
 
   pendolo
 */

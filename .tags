@@ -31,7 +31,7 @@ Si_mid	.\lezione5\es3.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Si_mid	.\lezione5\es3b.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Sum	.\lezione1\sum.cpp	/^int Sum(int a, int b) { return a + b; }$/;"	f
 acc	.\lezione13\harmonic.cpp	/^void acc(double *X, double *res, int n_part) {$/;"	f
-acc	.\lezione13\pendulum.cpp	/^void acc(double *Theta, double *res, int n_part)$/;"	f
+acc	.\lezione14\pendulum.cpp	/^void acc(double *Theta, double *res, int n_part)$/;"	f
 add_one	.\lezione1\add_one.cpp	/^int add_one(int &a) {$/;"	f
 add_one	.\lezione1\add_one.cpp	/^void add_one(&int);$/;"	v
 arg_Si	.\lezione5\es3.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
@@ -107,7 +107,7 @@ main	.\lezione11\rk_es3.cpp	/^int main() {$/;"	f
 main	.\lezione12\kepler.cpp	/^int main() {$/;"	f
 main	.\lezione13\harmonic.cpp	/^int main() {$/;"	f
 main	.\lezione13\kepler.cpp	/^int main() {$/;"	f
-main	.\lezione13\pendulum.cpp	/^int main() {$/;"	f
+main	.\lezione14\pendulum.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
