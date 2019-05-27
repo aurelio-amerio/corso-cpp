@@ -11,6 +11,7 @@ EulerStep	.\lezione11\ode.cpp	/^void EulerStep(double x, double *Y, void (*Ydot)
 EulerStep	.\lezione11\rk_es2.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 EulerStep	.\lezione11\rk_es3.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 EulerStep	.\lib\ode.h	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
+PRINT	.\lezione13\harmonic.cpp	14;"	d	file:
 Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
 RK4Step	.\lezione11\rk_es2.cpp	/^void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RK4Step	.\lezione11\rk_es3.cpp	/^void RK4Step(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
@@ -103,6 +104,7 @@ main	.\lezione11\rk_es2.cpp	/^int main() {$/;"	f
 main	.\lezione11\rk_es3.cpp	/^int main() {$/;"	f
 main	.\lezione12\kepler.cpp	/^int main() {$/;"	f
 main	.\lezione13\harmonic.cpp	/^int main() {$/;"	f
+main	.\lezione13\kepler.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -148,6 +150,7 @@ rhs	.\lezione11\rk_es2.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs	.\lezione11\rk_es3.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs_1	.\lezione12\kepler.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
 rhs_1	.\lezione13\harmonic.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
+rhs_1	.\lezione13\kepler.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
 secant	.\lezione8\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.cpp	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
 secant	.\lezione9\froot.h	/^double secant(double (*func)(double), double a, double b, double xtol,$/;"	f
@@ -165,4 +168,4 @@ test_conv	.\lezione4\es1.cpp	/^double test_conv(double (*func)(double (*arg)(dou
 trapz	.\lezione4\es1.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 trapz	.\lib\quad.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 velocity_Verlet	.\lezione13\harmonic.cpp	/^void velocity_Verlet(double *X, double *V,$/;"	f
-velocity_Verlet_print	.\lezione13\harmonic.cpp	/^void velocity_Verlet_print(double *X, double *V,$/;"	f
+verlet4	.\lezione13\harmonic.cpp	/^void verlet4(double *X, double *V,$/;"	f
