@@ -4,7 +4,7 @@
 
   root finder implementation
 */
-#include "./root_finders.h"
+#include "root_finders.h"
 
 double bisec(double (*func)(double), double a, double b, double xtol,
              double ytol) {

@@ -5,7 +5,7 @@
   quadratura numerica: implementation
 */
 
-#include "./quad.h"
+#include "quad.h"
 
 // implementation
 
