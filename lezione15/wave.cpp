@@ -3,7 +3,7 @@
   Algoritmi numerici per la fisica
   Lezione 15
 
-  poisson
+  wave
 */
 
 // #include "../lib/ode.h"
@@ -14,29 +14,27 @@
 using namespace std;
 
 #define PI 3.1415926
-#define STEP 3
+#define STEP 0
 
 void rhs(double r, double *Y, double *R) {
-  double phi, s;
-  double rho;
+  double phi, s, k;
 
   phi = Y[0];
   s = Y[1];
-
-  rho = 1. / (8 * PI) * exp(-r);
+  k = Y[2];
 
   R[0] = s;
-  R[1] = -4 * PI * r * rho;
+  R[1] = -k * k * phi;
 
   return;
 }
 
-double residual(double s) {
+double residual(double k) {
 
-  double Y[] = {0, s};
+  double Y[] = {0, 1, k};
   double r = 0;
-  int n_steps = 1000;
-  double rmax = 20.;
+  int n_steps = 100;
+  double rmax = 1.;
   double dr = rmax / n_steps;
 
   for (int i = 0; i < n_steps; i++) {
@@ -49,7 +47,7 @@ double residual(double s) {
     r += dr;
   }
 
-  double residual = Y[0] - 1.;
+  double residual = Y[0];
   return residual;
 }
 
@@ -58,33 +56,32 @@ int main() {
   // Runge-Kutta 4 s0
   ofstream file1;
   double s = 1.;
-  file1.open("poisson_s1.dat");
-  double Y[] = {0, s};
+  double k = 1;
+  file1.open("wave1.dat");
+  double Y[] = {0, 1, k};
   double r = 0;
-  double rmax = 20.;
-  int n_steps = 1000;
+  int n_steps = 100;
+  double rmax = 1.;
   double dr = rmax / n_steps;
 
   for (int i = 0; i < n_steps; i++) {
     RK4Step(r, Y, rhs, dr, 2);
     r += dr;
-    file1 << i << " " << Y[0] << " " << Y[1] << endl;
+    file1 << double(i)/dr << " " << Y[0] << " " << Y[1] << endl;
   }
   file1.close();
 #endif
 
 #if STEP == 1
-  cout << residual(0.4) << endl;
+  cout << residual(PI) << endl;
 #endif
 
 #if STEP == 2
-  double res = bisec(residual, 0.3, 0.6, 1e-9, 1e-9);
+  double res = bisec(residual, 1, 5, 1e-9, 1e-9);
   cout << "bisec: " << res << endl;
 
-  res = secant(residual, 0.3, 0.6, 1e-9, 1e-9);
+  res = secant(residual, 1, 5, 1e-9, 1e-9);
   cout << "secant: " << res << endl;
-
-  
 
 #endif
 #if STEP == 3
@@ -92,16 +89,16 @@ int main() {
   double xL[2];
   double xR[2];
   int n_int = 10;
-  bracket(residual, 0, 1, n_int, xL, xR, n_roots);
+  bracket(residual, 0, 5, n_int, xL, xR, n_roots);
 
   double res = secant(residual, xL[0], xR[0], 1e-9, 1e-9);
   cout << "secant: " << res << endl;
 
-  double s = res;
-  double Y[] = {0, s};
+  double k = res;
+  double Y[] = {0, 1, k};
   double r = 0;
-  double rmax = 20.;
-  int n_steps = 1000;
+  int n_steps = 100;
+  double rmax = 1.;
   double dr = rmax / n_steps;
 
   for (int i = 0; i < n_steps; i++) {
@@ -110,7 +107,7 @@ int main() {
   }
 
   cout << "res: " << Y[0] << endl;
-  cout << "true res: " << 1. - 0.5 * (20 + 2) * exp(-20) << endl;
+  cout << "true res: " << PI << endl;
 
 #endif
 
