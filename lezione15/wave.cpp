@@ -98,7 +98,7 @@ int main() {
   cout << "secant: " << endl;
   for (int i = 0; i < n_roots; i++) {
     res = secant(residual, xL[i], xR[i], 1e-9, 1e-9);
-    cout << "k= " << res << endl;
+    cout << "k= " << setprecision(12)<<res << endl;
   }
 
 #endif
