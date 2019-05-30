@@ -91,6 +91,7 @@ func	.\lezione9\froot.cpp	/^double func(double x) {$/;"	f
 func	.\lezione9\polinomial.cpp	/^double func(double x) {$/;"	f
 func	.\lezione9\test_int.cpp	/^double func(double x) { return x * x * x + 3; }$/;"	f
 func2	.\lezione6\es1.cpp	/^double func2(double x, double y) {$/;"	f
+g_k	.\lezione15\wave.cpp	/^double g_k = 0;$/;"	v
 gauss	.\lezione4\es2.cpp	/^double gauss(double (*func)(double x), double a, double b, double tol)$/;"	f
 gauss	.\lezione4\es2.cpp	/^double gauss(double (*func)(double x), double a, double b, int n_points)$/;"	f
 gauss	.\lezione4\es2b.cpp	/^double gauss(double (*func)(double x), double a, double b, double tol = 1e-5, bool verbose=false) {$/;"	f

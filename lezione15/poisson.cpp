@@ -84,14 +84,15 @@ int main() {
   res = secant(residual, 0.3, 0.6, 1e-9, 1e-9);
   cout << "secant: " << res << endl;
 
-  
+
 
 #endif
 #if STEP == 3
   int n_roots = 1;
-  double xL[2];
-  double xR[2];
   int n_int = 10;
+  double xL[n_int];
+  double xR[n_int];
+
   bracket(residual, 0, 1, n_int, xL, xR, n_roots);
 
   double res = secant(residual, xL[0], xR[0], 1e-9, 1e-9);

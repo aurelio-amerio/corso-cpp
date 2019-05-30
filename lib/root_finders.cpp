@@ -198,10 +198,11 @@ void bracket(double (*func)(double), double a, double b, int n_intervals,
              double *xL, double *xR, int &n_roots) {
   double fa = func(a);
   double fb = 0;
+  double a0=a;
   n_roots = 0;
   double dx = (b - a) / n_intervals;
   for (int i = 0; i < n_intervals; i++) {
-    b = a + (i + 1) * dx;
+    b = a0 + (i + 1) * dx;
     fb = func(b);
     if ((fb * fa) < 0) {
       xL[n_roots] = a;

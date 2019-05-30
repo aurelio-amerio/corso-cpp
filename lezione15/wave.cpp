@@ -14,14 +14,16 @@
 using namespace std;
 
 #define PI 3.1415926
-#define STEP 0
+#define STEP 3
+
+double g_k = 0;
 
 void rhs(double r, double *Y, double *R) {
   double phi, s, k;
-
+  k = g_k;
   phi = Y[0];
   s = Y[1];
-  k = Y[2];
+  // cout << "K: " << k << endl;
 
   R[0] = s;
   R[1] = -k * k * phi;
@@ -30,9 +32,9 @@ void rhs(double r, double *Y, double *R) {
 }
 
 double residual(double k) {
-
-  double Y[] = {0, 1, k};
-  double r = 0;
+  double Y[] = {0, 1};
+  g_k = k;
+  double r = 0.;
   int n_steps = 100;
   double rmax = 1.;
   double dr = rmax / n_steps;
@@ -56,9 +58,9 @@ int main() {
   // Runge-Kutta 4 s0
   ofstream file1;
   double s = 1.;
-  double k = 1;
-  file1.open("wave1.dat");
-  double Y[] = {0, 1, k};
+  g_k = 4;
+  file1.open("wave4.dat");
+  double Y[] = {0, 1};
   double r = 0;
   int n_steps = 100;
   double rmax = 1.;
@@ -67,13 +69,13 @@ int main() {
   for (int i = 0; i < n_steps; i++) {
     RK4Step(r, Y, rhs, dr, 2);
     r += dr;
-    file1 << double(i)/dr << " " << Y[0] << " " << Y[1] << endl;
+    file1 << double(i) * dr << " " << Y[0] << " " << Y[1] << endl;
   }
   file1.close();
 #endif
 
 #if STEP == 1
-  cout << residual(PI) << endl;
+  cout << residual(3.14) << endl;
 #endif
 
 #if STEP == 2
@@ -85,29 +87,19 @@ int main() {
 
 #endif
 #if STEP == 3
-  int n_roots = 1;
-  double xL[2];
-  double xR[2];
-  int n_int = 10;
-  bracket(residual, 0, 5, n_int, xL, xR, n_roots);
+  int n_roots = 0;
+  int n_int = 20;
+  double xL[n_int];
+  double xR[n_int];
 
-  double res = secant(residual, xL[0], xR[0], 1e-9, 1e-9);
-  cout << "secant: " << res << endl;
-
-  double k = res;
-  double Y[] = {0, 1, k};
-  double r = 0;
-  int n_steps = 100;
-  double rmax = 1.;
-  double dr = rmax / n_steps;
-
-  for (int i = 0; i < n_steps; i++) {
-    RK4Step(r, Y, rhs, dr, 2);
-    r += dr;
+  bracket(residual, 1, 20, n_int, xL, xR, n_roots);
+  double res;
+  cout << "nroots: " << n_roots << endl;
+  cout << "secant: " << endl;
+  for (int i = 0; i < n_roots; i++) {
+    res = secant(residual, xL[i], xR[i], 1e-9, 1e-9);
+    cout << "k= " << res << endl;
   }
-
-  cout << "res: " << Y[0] << endl;
-  cout << "true res: " << PI << endl;
 
 #endif
 
