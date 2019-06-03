@@ -122,6 +122,7 @@ main	.\lezione13\kepler.cpp	/^int main() {$/;"	f
 main	.\lezione14\pendulum.cpp	/^int main() {$/;"	f
 main	.\lezione15\poisson.cpp	/^int main() {$/;"	f
 main	.\lezione15\wave.cpp	/^int main() {$/;"	f
+main	.\lezione16\3diag.cpp	/^int main() {$/;"	f
 main	.\lezione16\gauss_elim.cpp	/^int main() {$/;"	f
 main	.\lezione16\matrix.cpp	/^int main() {$/;"	f
 main	.\lezione16\qho.cpp	/^int main() {$/;"	f
@@ -196,6 +197,7 @@ swapRowsVector	.\lezione16\gauss_elim.cpp	/^void swapRowsVector(double *b, int r
 test_conv	.\lezione4\es1.cpp	/^double test_conv(double (*func)(double (*arg)(double x), double a, double b,$/;"	f
 trapz	.\lezione4\es1.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 trapz	.\lib\quad.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
+tridiag_solve	.\lezione16\3diag.cpp	/^void tridiag_solve(double *a, double *b, double *c, double *r, double *x,$/;"	f
 velocity_Verlet	.\lezione13\harmonic.cpp	/^void velocity_Verlet(double *X, double *V,$/;"	f
 velocity_Verlet	.\lib\ode.cpp	/^void velocity_Verlet(double *X, double *V,$/;"	f
 verlet4	.\lezione13\harmonic.cpp	/^void verlet4(double *X, double *V,$/;"	f
