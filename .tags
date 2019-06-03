@@ -13,6 +13,7 @@ EulerStep	.\lezione11\rk_es3.cpp	/^void EulerStep(double t, double *Y, void (*Yd
 EulerStep	.\lib\ode.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 PI	.\lezione15\poisson.cpp	16;"	d	file:
 PI	.\lezione15\wave.cpp	16;"	d	file:
+PI	.\lezione16\qho.cpp	15;"	d	file:
 PRINT	.\lezione13\harmonic.cpp	14;"	d	file:
 PRINT	.\lib\ode.h	6;"	d
 Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
@@ -25,6 +26,7 @@ RKStep	.\lezione11\rk_es3.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(do
 RKStep	.\lib\ode.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 STEP	.\lezione15\poisson.cpp	17;"	d	file:
 STEP	.\lezione15\wave.cpp	17;"	d	file:
+STEP	.\lezione16\qho.cpp	16;"	d	file:
 Si	.\lezione5\es3.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
 Si	.\lezione5\es3.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	f
 Si	.\lezione5\es3b.cpp	/^double Si(double x, double tol=1e-8) {$/;"	f
@@ -41,6 +43,7 @@ add_one	.\lezione1\add_one.cpp	/^void add_one(&int);$/;"	v
 arg_Si	.\lezione5\es3.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
 arg_Si	.\lezione5\es3b.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
 arg_Si	.\lezione5\es4.cpp	/^double arg_Si(double x) { return sin(x) \/ x; }$/;"	f
+asymp	.\lezione16\qho.cpp	/^double asymp(double x) { return sqrt(PI) * exp(-x * x * 0.5) \/ sqrt(fabs(x)); }$/;"	f
 backward_derivaive	.\lezione10\derivatives.h	/^double backward_derivaive(double (*func)(double x), double x0, double h)$/;"	f
 bisec	.\lezione8\froot.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
 bisec	.\lezione9\froot.cpp	/^double bisec(double (*func)(double), double a, double b, double xtol,$/;"	f
@@ -53,6 +56,7 @@ compute_std_dev	.\lezione2\arrays.cpp	/^double compute_std_dev(double *array, in
 compute_variance	.\lezione2\arrays.cpp	/^double compute_variance(double *array, int len) {$/;"	f
 dYdx	.\lezione11\ode.cpp	/^void dYdx(double x, double *Y, double *R) {$/;"	f
 dYdx	.\lezione11\rk_es1.cpp	/^void dYdx(double x, double *Y, double *R) {$/;"	f
+dasymp	.\lezione16\qho.cpp	/^double dasymp(double x) {$/;"	f
 der	.\lezione9\froot.cpp	/^double der(double x) {$/;"	f
 der_func	.\lezione10\deriv.cpp	/^double der_func(double x)$/;"	f
 derivaive_f	.\lezione10\derivatives.h	/^double derivaive_f(double (*func)(double x), double x0, double h)$/;"	f
@@ -80,6 +84,7 @@ false_pos	.\lezione9\froot.h	/^double false_pos(double (*func)(double), double a
 false_pos	.\lib\root_finders.cpp	/^double false_pos(double (*func)(double), double a, double b, double xtol,$/;"	f
 forward_derivaive	.\lezione10\derivatives.h	/^double forward_derivaive(double (*func)(double x), double x0, double h)$/;"	f
 func	.\lezione10\deriv.cpp	/^double func(double x)$/;"	f
+func	.\lezione16\matrix.cpp	/^void func(double **A, double *b, int n) {$/;"	f
 func	.\lezione4\es1.cpp	/^double func(double x) { return exp(-x); }$/;"	f
 func	.\lezione4\es2.cpp	/^double func(double x) { return sqrt(1 + x); }$/;"	f
 func	.\lezione4\es2b.cpp	/^double func(double x) { return sqrt(1 + x); }$/;"	f
@@ -91,6 +96,7 @@ func	.\lezione9\froot.cpp	/^double func(double x) {$/;"	f
 func	.\lezione9\polinomial.cpp	/^double func(double x) {$/;"	f
 func	.\lezione9\test_int.cpp	/^double func(double x) { return x * x * x + 3; }$/;"	f
 func2	.\lezione6\es1.cpp	/^double func2(double x, double y) {$/;"	f
+g_E	.\lezione16\qho.cpp	/^double g_E = 0.5;$/;"	v
 g_k	.\lezione15\wave.cpp	/^double g_k = 0;$/;"	v
 gauss	.\lezione4\es2.cpp	/^double gauss(double (*func)(double x), double a, double b, double tol)$/;"	f
 gauss	.\lezione4\es2.cpp	/^double gauss(double (*func)(double x), double a, double b, int n_points)$/;"	f
@@ -100,6 +106,7 @@ gauss	.\lib\quad.cpp	/^double gauss(double (*func)(double x), double a, double b
 gauss_3	.\lezione4\es2.cpp	/^double gauss_3(double (*func)(double x), double a, double b) {$/;"	f
 gauss_3	.\lezione4\es2b.cpp	/^double gauss_3(double (*func)(double x), double a, double b) {$/;"	f
 gauss_order	.\lib\quad.cpp	/^double gauss_order(double (*func)(double x), double a, double b, int order) {$/;"	f
+gaussian_elim	.\lezione16\gauss_elim.cpp	/^void gaussian_elim(double **A, double *b, double *x, double n) {$/;"	f
 int_func	.\lezione4\es1.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2b.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
@@ -115,6 +122,9 @@ main	.\lezione13\kepler.cpp	/^int main() {$/;"	f
 main	.\lezione14\pendulum.cpp	/^int main() {$/;"	f
 main	.\lezione15\poisson.cpp	/^int main() {$/;"	f
 main	.\lezione15\wave.cpp	/^int main() {$/;"	f
+main	.\lezione16\gauss_elim.cpp	/^int main() {$/;"	f
+main	.\lezione16\matrix.cpp	/^int main() {$/;"	f
+main	.\lezione16\qho.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -158,11 +168,13 @@ rect_quad	.\lezione4\es1.cpp	/^double rect_quad(double (*func)(double x), double
 rect_quad	.\lib\quad.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
 residual	.\lezione15\poisson.cpp	/^double residual(double s) {$/;"	f
 residual	.\lezione15\wave.cpp	/^double residual(double k) {$/;"	f
+residual	.\lezione16\qho.cpp	/^double residual(double En) {$/;"	f
 rhs	.\lezione11\rk_es2.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs	.\lezione11\rk_es3.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs	.\lezione14\pendulum.cpp	/^void rhs(double t, double *Y, double *R) {$/;"	f
 rhs	.\lezione15\poisson.cpp	/^void rhs(double r, double *Y, double *R) {$/;"	f
 rhs	.\lezione15\wave.cpp	/^void rhs(double r, double *Y, double *R) {$/;"	f
+rhs	.\lezione16\qho.cpp	/^void rhs(double x, double *Y, double *R) {$/;"	f
 rhs_1	.\lezione12\kepler.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
 rhs_1	.\lezione13\harmonic.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
 rhs_1	.\lezione13\kepler.cpp	/^void rhs_1(double t, double *Y, double *R) {$/;"	f
@@ -179,6 +191,8 @@ sin	.\lezione3\sin_approx.cpp	/^double sin(double x) {$/;"	f
 solve	.\lezione3\quadratic.cpp	/^void solve(double a, double b, double c) {$/;"	f
 solve_v2	.\lezione3\quadratic.cpp	/^void solve_v2(double a, double b, double c) {$/;"	f
 sqrt_babyl	.\lezione3\babyl.cpp	/^double sqrt_babyl(double s, double s0, double tol=1e-5) {$/;"	f
+swapRowsMatrix	.\lezione16\gauss_elim.cpp	/^void swapRowsMatrix(double **A, int r1, int r2) {$/;"	f
+swapRowsVector	.\lezione16\gauss_elim.cpp	/^void swapRowsVector(double *b, int r1, int r2) {$/;"	f
 test_conv	.\lezione4\es1.cpp	/^double test_conv(double (*func)(double (*arg)(double x), double a, double b,$/;"	f
 trapz	.\lezione4\es1.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 trapz	.\lib\quad.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
