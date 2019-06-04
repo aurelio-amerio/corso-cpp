@@ -15,6 +15,7 @@ PI	.\lezione15\poisson.cpp	16;"	d	file:
 PI	.\lezione15\wave.cpp	16;"	d	file:
 PI	.\lezione16\qho.cpp	15;"	d	file:
 PI	.\lezione17\elliptic.cpp	8;"	d	file:
+PI	.\lezione17\poisson_ell.cpp	8;"	d	file:
 PRINT	.\lezione13\harmonic.cpp	14;"	d	file:
 PRINT	.\lib\ode.h	6;"	d
 Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
@@ -26,7 +27,9 @@ RKStep	.\lezione11\rk_es2.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(do
 RKStep	.\lezione11\rk_es3.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RKStep	.\lib\ode.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 S	.\lezione17\elliptic.cpp	/^double S(double x, double y) { return 0; }$/;"	f
+S	.\lezione17\poisson_ell.cpp	/^double S(double x, double y) {$/;"	f
 SOR	.\lezione17\elliptic.cpp	/^void SOR(double **solutions, double xmin, double xmax, double ymin, double ymax,$/;"	f
+SOR	.\lezione17\poisson_ell.cpp	/^void SOR(double **solutions, double xmin, double xmax, double ymin, double ymax,$/;"	f
 STEP	.\lezione15\poisson.cpp	17;"	d	file:
 STEP	.\lezione15\wave.cpp	17;"	d	file:
 STEP	.\lezione16\qho.cpp	16;"	d	file:
@@ -40,6 +43,7 @@ Si_mid	.\lezione5\es3.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Si_mid	.\lezione5\es3b.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Sum	.\lezione1\sum.cpp	/^int Sum(int a, int b) { return a + b; }$/;"	f
 VERBOSE	.\lezione17\elliptic.cpp	9;"	d	file:
+VERBOSE	.\lezione17\poisson_ell.cpp	9;"	d	file:
 acc	.\lezione13\harmonic.cpp	/^void acc(double *X, double *res, int n_part) {$/;"	f
 acc	.\lezione14\pendulum.cpp	/^void acc(double *Theta, double *res, int n_part) {$/;"	f
 add_one	.\lezione1\add_one.cpp	/^int add_one(int &a) {$/;"	f
@@ -111,11 +115,13 @@ gauss_3	.\lezione4\es2.cpp	/^double gauss_3(double (*func)(double x), double a, 
 gauss_3	.\lezione4\es2b.cpp	/^double gauss_3(double (*func)(double x), double a, double b) {$/;"	f
 gauss_order	.\lib\quad.cpp	/^double gauss_order(double (*func)(double x), double a, double b, int order) {$/;"	f
 gauss_seidel	.\lezione17\elliptic.cpp	/^void gauss_seidel(double **solutions, double xmin, double xmax, double ymin,$/;"	f
+gauss_seidel	.\lezione17\poisson_ell.cpp	/^void gauss_seidel(double **solutions, double xmin, double xmax, double ymin,$/;"	f
 gaussian_elim	.\lezione16\gauss_elim.cpp	/^void gaussian_elim(double **A, double *b, double *x, double n) {$/;"	f
 int_func	.\lezione4\es1.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2b.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 jacobi	.\lezione17\elliptic.cpp	/^void jacobi(double **solutions, double xmin, double xmax, double ymin,$/;"	f
+jacobi	.\lezione17\poisson_ell.cpp	/^void jacobi(double **solutions, double xmin, double xmax, double ymin,$/;"	f
 main	.\lezione10\deriv.cpp	/^int main()$/;"	f
 main	.\lezione10\ode.cpp	/^int main() {$/;"	f
 main	.\lezione11\ode.cpp	/^int main() {$/;"	f
@@ -134,6 +140,7 @@ main	.\lezione16\matrix.cpp	/^int main() {$/;"	f
 main	.\lezione16\ode_BVP.cpp	/^int main() {$/;"	f
 main	.\lezione16\qho.cpp	/^int main() {$/;"	f
 main	.\lezione17\elliptic.cpp	/^int main() {$/;"	f
+main	.\lezione17\poisson_ell.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -198,6 +205,7 @@ simps	.\lezione4\es2b.cpp	/^double simps(double (*func)(double x), double a, dou
 simps	.\lezione4\es2b.cpp	/^double simps(double (*func)(double x), double a, double b, int n) {$/;"	f
 simps	.\lib\quad.cpp	/^double simps(double (*func)(double x), double a, double b, int n) {$/;"	f
 sin	.\lezione3\sin_approx.cpp	/^double sin(double x) {$/;"	f
+sol_func	.\lezione17\poisson_ell.cpp	/^double sol_func(double x, double y) {$/;"	f
 solve	.\lezione3\quadratic.cpp	/^void solve(double a, double b, double c) {$/;"	f
 solve_v2	.\lezione3\quadratic.cpp	/^void solve_v2(double a, double b, double c) {$/;"	f
 sqrt_babyl	.\lezione3\babyl.cpp	/^double sqrt_babyl(double s, double s0, double tol=1e-5) {$/;"	f
