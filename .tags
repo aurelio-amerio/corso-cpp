@@ -14,6 +14,7 @@ EulerStep	.\lib\ode.cpp	/^void EulerStep(double t, double *Y, void (*Ydot)(doubl
 PI	.\lezione15\poisson.cpp	16;"	d	file:
 PI	.\lezione15\wave.cpp	16;"	d	file:
 PI	.\lezione16\qho.cpp	15;"	d	file:
+PI	.\lezione17\elliptic.cpp	8;"	d	file:
 PRINT	.\lezione13\harmonic.cpp	14;"	d	file:
 PRINT	.\lib\ode.h	6;"	d
 Quot	.\lezione1\quot.cpp	/^int *Quot(int a, int b) {$/;"	f
@@ -24,6 +25,8 @@ RKStep	.\lezione11\rk_es1.cpp	/^void RKStep(double x, double *Y, void (*Ydot)(do
 RKStep	.\lezione11\rk_es2.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RKStep	.\lezione11\rk_es3.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
 RKStep	.\lib\ode.cpp	/^void RKStep(double t, double *Y, void (*Ydot)(double, double *, double *),$/;"	f
+S	.\lezione17\elliptic.cpp	/^double S(double x, double y) { return 0; }$/;"	f
+SOR	.\lezione17\elliptic.cpp	/^void SOR(double **solutions, double xmin, double xmax, double ymin, double ymax,$/;"	f
 STEP	.\lezione15\poisson.cpp	17;"	d	file:
 STEP	.\lezione15\wave.cpp	17;"	d	file:
 STEP	.\lezione16\qho.cpp	16;"	d	file:
@@ -36,6 +39,7 @@ Si	.\lezione5\es4.cpp	/^double Si(double x, int n_intervals, int order=5) {$/;"	
 Si_mid	.\lezione5\es3.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Si_mid	.\lezione5\es3b.cpp	/^double Si_mid(double x, int n_intervals) {$/;"	f
 Sum	.\lezione1\sum.cpp	/^int Sum(int a, int b) { return a + b; }$/;"	f
+VERBOSE	.\lezione17\elliptic.cpp	9;"	d	file:
 acc	.\lezione13\harmonic.cpp	/^void acc(double *X, double *res, int n_part) {$/;"	f
 acc	.\lezione14\pendulum.cpp	/^void acc(double *Theta, double *res, int n_part) {$/;"	f
 add_one	.\lezione1\add_one.cpp	/^int add_one(int &a) {$/;"	f
@@ -106,10 +110,12 @@ gauss	.\lib\quad.cpp	/^double gauss(double (*func)(double x), double a, double b
 gauss_3	.\lezione4\es2.cpp	/^double gauss_3(double (*func)(double x), double a, double b) {$/;"	f
 gauss_3	.\lezione4\es2b.cpp	/^double gauss_3(double (*func)(double x), double a, double b) {$/;"	f
 gauss_order	.\lib\quad.cpp	/^double gauss_order(double (*func)(double x), double a, double b, int order) {$/;"	f
+gauss_seidel	.\lezione17\elliptic.cpp	/^void gauss_seidel(double **solutions, double xmin, double xmax, double ymin,$/;"	f
 gaussian_elim	.\lezione16\gauss_elim.cpp	/^void gaussian_elim(double **A, double *b, double *x, double n) {$/;"	f
 int_func	.\lezione4\es1.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
 int_func	.\lezione4\es2b.cpp	/^double int_func(double a, double b) { return -exp(-b) + exp(-a); }$/;"	f
+jacobi	.\lezione17\elliptic.cpp	/^void jacobi(double **solutions, double xmin, double xmax, double ymin,$/;"	f
 main	.\lezione10\deriv.cpp	/^int main()$/;"	f
 main	.\lezione10\ode.cpp	/^int main() {$/;"	f
 main	.\lezione11\ode.cpp	/^int main() {$/;"	f
@@ -125,7 +131,9 @@ main	.\lezione15\wave.cpp	/^int main() {$/;"	f
 main	.\lezione16\3diag.cpp	/^int main() {$/;"	f
 main	.\lezione16\gauss_elim.cpp	/^int main() {$/;"	f
 main	.\lezione16\matrix.cpp	/^int main() {$/;"	f
+main	.\lezione16\ode_BVP.cpp	/^int main() {$/;"	f
 main	.\lezione16\qho.cpp	/^int main() {$/;"	f
+main	.\lezione17\elliptic.cpp	/^int main() {$/;"	f
 main	.\lezione1\add_one.cpp	/^int main() {$/;"	f
 main	.\lezione1\es1.cpp	/^int main() {$/;"	f
 main	.\lezione1\es2.cpp	/^int main() {$/;"	f
@@ -167,6 +175,7 @@ newton	.\lezione9\froot.h	/^double newton(double (*func)(double), double (*der)(
 newton	.\lib\root_finders.cpp	/^double newton(double (*func)(double), double (*der)(double), double a, double b,$/;"	f
 rect_quad	.\lezione4\es1.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
 rect_quad	.\lib\quad.cpp	/^double rect_quad(double (*func)(double x), double a, double b, int n) {$/;"	f
+relaxationSolve	.\lezione16\ode_BVP.cpp	/^void relaxationSolve(double (*func)(double x), double *Y, double xmin,$/;"	f
 residual	.\lezione15\poisson.cpp	/^double residual(double s) {$/;"	f
 residual	.\lezione15\wave.cpp	/^double residual(double k) {$/;"	f
 residual	.\lezione16\qho.cpp	/^double residual(double En) {$/;"	f
@@ -198,6 +207,7 @@ test_conv	.\lezione4\es1.cpp	/^double test_conv(double (*func)(double (*arg)(dou
 trapz	.\lezione4\es1.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 trapz	.\lib\quad.cpp	/^double trapz(double (*func)(double x), double a, double b, int n) {$/;"	f
 tridiag_solve	.\lezione16\3diag.cpp	/^void tridiag_solve(double *a, double *b, double *c, double *r, double *x,$/;"	f
+tridiag_solve	.\lezione16\ode_BVP.cpp	/^void tridiag_solve(double *a, double *b, double *c, double *r, double *x,$/;"	f
 velocity_Verlet	.\lezione13\harmonic.cpp	/^void velocity_Verlet(double *X, double *V,$/;"	f
 velocity_Verlet	.\lib\ode.cpp	/^void velocity_Verlet(double *X, double *V,$/;"	f
 verlet4	.\lezione13\harmonic.cpp	/^void verlet4(double *X, double *V,$/;"	f
