@@ -12,20 +12,20 @@ data_gs = open("gauss_seidel_p.dat")
 df_gs=CSV.read(data_gs, header=false, delim=" ")
 x_gs=df_gs[1]
 y_gs=df_gs[2]
-z_gs=reshape(df_gs[3],(101,101))
+z_gs=transpose(reshape(df_gs[3],(101,101)))
 
 data_s = open("sor_p.dat")
 df_s=CSV.read(data_s, header=false, delim=" ")
 x_s=df_s[1]
 y_s=df_s[2]
-z_s=reshape(df_s[3],(101,101))
+z_s=transpose(reshape(df_s[3],(101,101)))
 
 
 data_sol = open("sol_p.dat")
 df_sol=CSV.read(data_sol, header=false, delim=" ")
 x_sol=df_sol[1]
 y_sol=df_sol[2]
-z_sol=reshape(df_sol[3],(101,101))
+z_sol=transpose(reshape(df_sol[3],(101,101)))
 length(x_sol)/101
 x=y_sol[1:101]
 y=x
